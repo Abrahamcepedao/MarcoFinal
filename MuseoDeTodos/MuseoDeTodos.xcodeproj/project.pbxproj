@@ -43,7 +43,6 @@
 		D726402E272129C300DB1906 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726402D272129C300DB1906 /* WebViewViewController.swift */; };
 		D72F606427040B0C00DC2FF6 /* ReservaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F606327040B0C00DC2FF6 /* ReservaViewController.swift */; };
 		D76E34872717336000A1D11C /* HoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E34852717336000A1D11C /* HoyViewController.swift */; };
-		D76E34882717336000A1D11C /* HoyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76E34862717336000A1D11C /* HoyViewController.xib */; };
 		D76E349227173D7400A1D11C /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E349027173D7400A1D11C /* CalendarCollectionViewCell.swift */; };
 		D76E349327173D7400A1D11C /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76E349127173D7400A1D11C /* CalendarCollectionViewCell.xib */; };
 		D76E34982717406700A1D11C /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E34972717406700A1D11C /* Evento.swift */; };
@@ -136,7 +135,6 @@
 		D726402D272129C300DB1906 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		D72F606327040B0C00DC2FF6 /* ReservaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaViewController.swift; sourceTree = "<group>"; };
 		D76E34852717336000A1D11C /* HoyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoyViewController.swift; sourceTree = "<group>"; };
-		D76E34862717336000A1D11C /* HoyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoyViewController.xib; sourceTree = "<group>"; };
 		D76E349027173D7400A1D11C /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		D76E349127173D7400A1D11C /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		D76E34972717406700A1D11C /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
@@ -307,7 +305,6 @@
 				0B585FC1270D7C140050EE3B /* FaqsViewController.xib */,
 				0B46D073270DCFF500A15D7E /* PerfilDatosViewController.xib */,
 				D707981F27206E2A0066B066 /* TerminosViewController.xib */,
-				D76E34862717336000A1D11C /* HoyViewController.xib */,
 				D707985327208D990066B066 /* AgregarPagoViewController.xib */,
 			);
 			path = Views;
@@ -476,7 +473,6 @@
 				D7A75B3D26EAEFDD00F7443C /* RerservasTableViewCell.xib in Resources */,
 				D7927B1C271890870049D1FD /* QuestionTableViewCell.xib in Resources */,
 				D76E34A8271797E500A1D11C /* EventoTableViewCell.xib in Resources */,
-				D76E34882717336000A1D11C /* HoyViewController.xib in Resources */,
 				D708E8F126D31C6500CFD79D /* LaunchScreen.storyboard in Resources */,
 				D79F89F426E822A700659267 /* GoogleService-Info.plist in Resources */,
 				D707982B27206F3E0066B066 /* TerminoTableViewCell.xib in Resources */,
