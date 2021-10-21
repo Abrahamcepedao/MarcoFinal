@@ -19,7 +19,28 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupStyles()
     }
+    
+    func setupStyles(){
+        emailTF.layer.cornerRadius = 15
+        passwordTF.layer.cornerRadius = 15
+        confirmPasswordTF.layer.cornerRadius = 15
+        createBtn.layer.cornerRadius = 15
+        
+        emailTF.clipsToBounds = true
+        emailTF.layer.borderWidth = 2
+        emailTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        passwordTF.clipsToBounds = true
+        passwordTF.layer.borderWidth = 2
+        passwordTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        confirmPasswordTF.clipsToBounds = true
+        confirmPasswordTF.layer.borderWidth = 2
+        confirmPasswordTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true;
         self.navigationController?.isToolbarHidden = true

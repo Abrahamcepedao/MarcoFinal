@@ -32,6 +32,8 @@ class DatosPerfilViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setupStyles
 
         //setup firebase
         setupFirebase()
@@ -39,6 +41,30 @@ class DatosPerfilViewController: UIViewController {
         // setup pickers
         setupPicker()
         setupDatePicker()
+    }
+    
+    func setupStyles(){
+        firstnameTF.layer.cornerRadius = 15
+        secondnameTF.layer.cornerRadius = 15
+        lastnameTF.layer.cornerRadius = 15
+        sexTF.layer.cornerRadius = 15
+        birthdateTF.layer.cornerRadius = 15
+        nextBtn.layer.cornerRadius = 15
+        
+        firstnameTF.layer.borderWidth = 2
+        firstnameTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        secondnameTF.layer.borderWidth = 2
+        secondnameTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        lastnameTF.layer.borderWidth = 2
+        lastnameTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        sexTF.layer.borderWidth = 2
+        sexTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        birthdateTF.layer.borderWidth = 2
+        birthdateTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
     }
     
     func setupFirebase(){
