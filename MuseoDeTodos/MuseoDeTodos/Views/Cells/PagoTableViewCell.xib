@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PagoCell" rowHeight="92" id="KGk-i7-Jjw" customClass="PagoTableViewCell" customModule="MuseoDeTodos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D51-5G-a4v">
+                        <rect key="frame" x="0.0" y="10" width="320" height="70"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xid-jz-obQ">
+                                <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0dU-XH-dbF"/>
+                                    <constraint firstAttribute="width" constant="50" id="I3n-G4-jzM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCh-4b-99D">
+                                <rect key="frame" x="300" y="25" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="dEk-tl-yF9"/>
+                                    <constraint firstAttribute="width" constant="20" id="mQ1-IQ-Jx7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.92351055150000005" green="0.027997247869999999" blue="0.60786813500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="trash.circle.fill" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6885" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49f-eu-gVA">
+                                <rect key="frame" x="250" y="26.5" width="35" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.92941176469999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="7Qk-nl-nCA"/>
+                            <constraint firstAttribute="bottom" secondItem="Xid-jz-obQ" secondAttribute="bottom" constant="10" id="L0D-ck-jNG"/>
+                            <constraint firstItem="Xid-jz-obQ" firstAttribute="leading" secondItem="D51-5G-a4v" secondAttribute="leading" id="Nr8-LU-h5h"/>
+                            <constraint firstItem="TCh-4b-99D" firstAttribute="top" secondItem="D51-5G-a4v" secondAttribute="top" constant="25" id="Ses-ZH-Hym"/>
+                            <constraint firstAttribute="bottom" secondItem="49f-eu-gVA" secondAttribute="bottom" constant="26.5" id="UEV-qW-KTu"/>
+                            <constraint firstItem="Xid-jz-obQ" firstAttribute="top" secondItem="D51-5G-a4v" secondAttribute="top" constant="10" id="YL3-PX-C74"/>
+                            <constraint firstItem="TCh-4b-99D" firstAttribute="leading" secondItem="49f-eu-gVA" secondAttribute="trailing" constant="15" id="cdo-gE-1WA"/>
+                            <constraint firstItem="49f-eu-gVA" firstAttribute="top" secondItem="D51-5G-a4v" secondAttribute="top" constant="26.5" id="hmG-6t-zhP"/>
+                            <constraint firstAttribute="bottom" secondItem="TCh-4b-99D" secondAttribute="bottom" constant="25" id="td1-sq-ehs"/>
+                            <constraint firstAttribute="trailing" secondItem="TCh-4b-99D" secondAttribute="trailing" id="u4P-A2-5XW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.95686274510000002" green="0.92941176469999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="D51-5G-a4v" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7hT-Y6-RwQ"/>
+                    <constraint firstItem="D51-5G-a4v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AZt-0x-UcE"/>
+                    <constraint firstAttribute="bottom" secondItem="D51-5G-a4v" secondAttribute="bottom" constant="10" id="ChD-a4-91T"/>
+                    <constraint firstAttribute="trailing" secondItem="D51-5G-a4v" secondAttribute="trailing" id="yht-z4-PZR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cardImg" destination="Xid-jz-obQ" id="X5K-I4-DR4"/>
+                <outlet property="cardLbl" destination="49f-eu-gVA" id="SmS-pE-43G"/>
+                <outlet property="deleteBtn" destination="TCh-4b-99D" id="OQ9-ON-sMr"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="137.27678571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mastercard-logo" width="3500" height="2723"/>
+        <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
