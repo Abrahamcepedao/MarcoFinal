@@ -308,11 +308,13 @@ PODS:
   - Realm/Headers (10.17.0)
   - RealmSwift (10.17.0):
     - Realm (= 10.17.0)
+  - youtube-ios-player-helper (1.0.3)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - RealmSwift (~> 10)
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
@@ -334,6 +336,7 @@ SPEC REPOS:
     - PromisesObjC
     - Realm
     - RealmSwift
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -354,7 +357,8 @@ SPEC CHECKSUMS:
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Realm: 9533276bd76f66aa2fd0d3ffe700c1f6023dcab6
   RealmSwift: 57f5d59aa29852587aad1e861989e7af139894b5
+  youtube-ios-player-helper: 0185c57db23c80d63d6ca11251d110abb8a4ca61
 
-PODFILE CHECKSUM: 597cc9eb172047092a7a3cbee385c63c052e1e2e
+PODFILE CHECKSUM: d9579a03523dd3974915f0e1808ad964fd6a514d
 
 COCOAPODS: 1.11.0

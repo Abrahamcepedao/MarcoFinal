@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 import WebKit
 
 class Exposiciones2ViewController: UIViewController {
@@ -18,8 +20,12 @@ class Exposiciones2ViewController: UIViewController {
     @IBOutlet weak var lbl_Tecnica: UILabel!
     @IBOutlet weak var lbl_Obras: UILabel!
     @IBOutlet weak var lbl_Contenido: UILabel!
-    @IBOutlet weak var wkv_VideoUrl: WKWebView!
-        
+    
+    
+    @IBOutlet weak var videoBtn: UIButton!
+    @IBOutlet weak var recorridoBtn: UIButton!
+    
+    
     var data = Exposicion(id: "", title: "", startDate: "", description: "", cerraduria: "", museografia: "", salas: "", tecnica: "", obras: "", recorridoVirtual: "", videoUrl: "", photoUrl: "")
     
     var link = "https://www.youtube.com/embed/swhrA3qoqx4"
@@ -34,12 +40,30 @@ class Exposiciones2ViewController: UIViewController {
         lbl_Tecnica.text = "Tecnica: " + data.tecnica
         lbl_Obras.text = "Obras: " + data.obras
         lbl_Contenido.text = data.description
-        wkv_VideoUrl.load(URLRequest(url: URL(string: link)!))
+       
+        if data.videoUrl == "" {
+            videoBtn.isHidden = true
+        }
+        if data.recorridoVirtual == "" {
+            recorridoBtn.isHidden = true
+        }
+    }
+    
+    
+    @IBAction func videoBtnPressed(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
+        nextViewController.url = data.videoUrl!
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    @IBAction func recorridoBtnPressed(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
+        nextViewController.url = data.recorridoVirtual
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
 }
 
-// <iframe width="560" height="315" src="https://www.youtube.com/embed/fv1Q0SPWonk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-//<iframe width="560" height="315" src="https://www.youtube.com/embed/swhrA3qoqx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

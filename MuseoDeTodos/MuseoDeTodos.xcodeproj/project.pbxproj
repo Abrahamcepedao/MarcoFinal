@@ -40,6 +40,7 @@
 		D708E8FC26D31C6600CFD79D /* MuseoDeTodosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D708E8FB26D31C6600CFD79D /* MuseoDeTodosTests.swift */; };
 		D708E90726D31C6600CFD79D /* MuseoDeTodosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D708E90626D31C6600CFD79D /* MuseoDeTodosUITests.swift */; };
 		D708E91B26D31CAE00CFD79D /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D708E91A26D31CAE00CFD79D /* PerfilViewController.swift */; };
+		D726402E272129C300DB1906 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726402D272129C300DB1906 /* WebViewViewController.swift */; };
 		D72F606427040B0C00DC2FF6 /* ReservaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F606327040B0C00DC2FF6 /* ReservaViewController.swift */; };
 		D76E34872717336000A1D11C /* HoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E34852717336000A1D11C /* HoyViewController.swift */; };
 		D76E34882717336000A1D11C /* HoyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76E34862717336000A1D11C /* HoyViewController.xib */; };
@@ -132,6 +133,7 @@
 		D708E90626D31C6600CFD79D /* MuseoDeTodosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseoDeTodosUITests.swift; sourceTree = "<group>"; };
 		D708E90826D31C6600CFD79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D708E91A26D31CAE00CFD79D /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		D726402D272129C300DB1906 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		D72F606327040B0C00DC2FF6 /* ReservaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaViewController.swift; sourceTree = "<group>"; };
 		D76E34852717336000A1D11C /* HoyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoyViewController.swift; sourceTree = "<group>"; };
 		D76E34862717336000A1D11C /* HoyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoyViewController.xib; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				D707983D272081A10066B066 /* PagosViewController.swift */,
 				D707985227208D990066B066 /* AgregarPagoViewController.swift */,
 				32AD932E2720A36600AA520D /* Noticias2ViewController.swift */,
+				D726402D272129C300DB1906 /* WebViewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				D7A75B3C26EAEFDD00F7443C /* RerservasTableViewCell.swift in Sources */,
 				D7927B15271890570049D1FD /* Question.swift in Sources */,
 				D708E91B26D31CAE00CFD79D /* PerfilViewController.swift in Sources */,
+				D726402E272129C300DB1906 /* WebViewViewController.swift in Sources */,
 				D76E34AD2717A4DB00A1D11C /* NetworkManager.swift in Sources */,
 				D7927B1B271890870049D1FD /* QuestionTableViewCell.swift in Sources */,
 				D708E8E726D31C5D00CFD79D /* SceneDelegate.swift in Sources */,

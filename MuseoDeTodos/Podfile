@@ -19,5 +19,5 @@ target 'MuseoDeTodos' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'RealmSwift', '~>10'
-  
+  pod 'youtube-ios-player-helper'
 end

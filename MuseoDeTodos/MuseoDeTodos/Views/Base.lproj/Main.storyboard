@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="120" id="hWr-71-lJu"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L1A-TI-RRP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L1A-TI-RRP">
                                 <rect key="frame" x="20" y="181" width="374" height="632"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.92941176469999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
@@ -94,22 +94,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="VIDEO DE LA EXPOSICIÓN" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-i1-5Fd">
-                                <rect key="frame" x="112" y="578" width="302" height="30"/>
-                                <color key="backgroundColor" red="0.93404752020000004" green="0.70437973740000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vu2-44-l4I"/>
-                                </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0um-wP-WYf">
-                                <rect key="frame" x="0.0" y="174" width="414" height="368"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="528"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16p-qk-qWx">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="528"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruy-gi-LoW">
                                                 <rect key="frame" x="20" y="20" width="374" height="20"/>
@@ -166,7 +155,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjE-Wt-lbN">
-                                                <rect key="frame" x="20" y="200" width="374" height="138"/>
+                                                <rect key="frame" x="20" y="200" width="374" height="298"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                             </view>
                                         </subviews>
@@ -211,14 +200,6 @@
                                     <constraint firstItem="16p-qk-qWx" firstAttribute="top" secondItem="0um-wP-WYf" secondAttribute="top" id="zcT-j9-4Cc"/>
                                 </constraints>
                             </scrollView>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Cl-Cx-pHM">
-                                <rect key="frame" x="0.0" y="608" width="414" height="254"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" 16 OCT 2020 - 11 ABR 2021  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eMM-yG-9Mc">
                                 <rect key="frame" x="0.0" y="144" width="302" height="30"/>
                                 <color key="backgroundColor" red="0.92351055150000005" green="0.027997247869999999" blue="0.60786813500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -230,32 +211,55 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4n1-FE-aJt">
+                                <rect key="frame" x="20" y="722" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.92351055150000005" green="0.027997247869999999" blue="0.60786813500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TcV-r0-phe"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Ver video"/>
+                                <connections>
+                                    <action selector="videoBtnPressed:" destination="yiS-Xs-HRO" eventType="touchUpInside" id="5dr-6W-udT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-Rj-MvX">
+                                <rect key="frame" x="20" y="782" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.92891007660000002" green="0.74163788559999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2AY-EE-D86"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="G0h-VF-v8c"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Recorrido Virtual"/>
+                                <connections>
+                                    <action selector="recorridoBtnPressed:" destination="yiS-Xs-HRO" eventType="touchUpInside" id="2D2-4a-6nG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rzb-Fm-OkR"/>
                         <color key="backgroundColor" red="0.95680779220000001" green="0.92907702920000002" blue="0.904763341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="MbN-i1-5Fd" secondAttribute="bottom" constant="288" id="5Ta-l1-yue"/>
-                            <constraint firstItem="EJf-Mz-qXK" firstAttribute="centerX" secondItem="2Cl-Cx-pHM" secondAttribute="centerX" id="69C-CI-9FO"/>
-                            <constraint firstItem="MbN-i1-5Fd" firstAttribute="leading" secondItem="Rzb-Fm-OkR" secondAttribute="leading" constant="112" id="AEW-KN-LJC"/>
+                            <constraint firstItem="Rzb-Fm-OkR" firstAttribute="trailing" secondItem="zQK-Rj-MvX" secondAttribute="trailing" constant="20" id="6Jx-Na-5fo"/>
                             <constraint firstItem="0um-wP-WYf" firstAttribute="top" secondItem="eMM-yG-9Mc" secondAttribute="bottom" id="BBU-a3-8Oh"/>
+                            <constraint firstItem="zQK-Rj-MvX" firstAttribute="leading" secondItem="Rzb-Fm-OkR" secondAttribute="leading" constant="20" id="Bbz-h2-l7m"/>
                             <constraint firstItem="0um-wP-WYf" firstAttribute="trailing" secondItem="Rzb-Fm-OkR" secondAttribute="trailing" id="Ewh-kx-74D"/>
                             <constraint firstItem="0um-wP-WYf" firstAttribute="top" secondItem="eMM-yG-9Mc" secondAttribute="bottom" id="FSH-e3-uoA"/>
+                            <constraint firstItem="Rzb-Fm-OkR" firstAttribute="bottom" secondItem="4n1-FE-aJt" secondAttribute="bottom" priority="750" constant="40" id="IL2-z3-RRY"/>
                             <constraint firstItem="0um-wP-WYf" firstAttribute="leading" secondItem="Rzb-Fm-OkR" secondAttribute="leading" id="Nng-p3-7lT"/>
-                            <constraint firstItem="MbN-i1-5Fd" firstAttribute="trailing" secondItem="2Cl-Cx-pHM" secondAttribute="trailing" id="R2Q-ah-WGj"/>
+                            <constraint firstItem="zQK-Rj-MvX" firstAttribute="top" secondItem="4n1-FE-aJt" secondAttribute="bottom" constant="20" id="QcM-xp-mQk"/>
                             <constraint firstItem="EJf-Mz-qXK" firstAttribute="leading" secondItem="fyg-aR-69b" secondAttribute="leadingMargin" id="T9J-H3-hUZ"/>
                             <constraint firstItem="EJf-Mz-qXK" firstAttribute="centerX" secondItem="0um-wP-WYf" secondAttribute="centerX" id="WUH-Ma-zwP"/>
                             <constraint firstItem="EJf-Mz-qXK" firstAttribute="top" secondItem="Rzb-Fm-OkR" secondAttribute="top" constant="15" id="XDr-yL-2la"/>
+                            <constraint firstItem="4n1-FE-aJt" firstAttribute="leading" secondItem="Rzb-Fm-OkR" secondAttribute="leading" constant="20" id="Yjl-N6-1T2"/>
                             <constraint firstItem="eMM-yG-9Mc" firstAttribute="leading" secondItem="0um-wP-WYf" secondAttribute="leading" id="ZbZ-F0-zlQ"/>
-                            <constraint firstItem="MbN-i1-5Fd" firstAttribute="top" secondItem="0um-wP-WYf" secondAttribute="bottom" constant="36" id="amK-r6-Jsw"/>
                             <constraint firstItem="eMM-yG-9Mc" firstAttribute="leading" secondItem="fyg-aR-69b" secondAttribute="leading" id="bEH-gV-z8A"/>
                             <constraint firstItem="EJf-Mz-qXK" firstAttribute="trailing" secondItem="fyg-aR-69b" secondAttribute="trailingMargin" id="iyX-be-hbH"/>
-                            <constraint firstItem="eMM-yG-9Mc" firstAttribute="leading" secondItem="2Cl-Cx-pHM" secondAttribute="leading" id="kfw-yp-g27"/>
-                            <constraint firstItem="2Cl-Cx-pHM" firstAttribute="leading" secondItem="Rzb-Fm-OkR" secondAttribute="leading" id="kv6-L9-9qf"/>
+                            <constraint firstItem="Rzb-Fm-OkR" firstAttribute="bottom" secondItem="zQK-Rj-MvX" secondAttribute="bottom" constant="40" id="kCS-R3-pC6"/>
+                            <constraint firstItem="Rzb-Fm-OkR" firstAttribute="trailing" secondItem="4n1-FE-aJt" secondAttribute="trailing" constant="20" id="klX-VP-JWn"/>
+                            <constraint firstItem="4n1-FE-aJt" firstAttribute="top" secondItem="0um-wP-WYf" secondAttribute="bottom" constant="20" id="typ-4q-2C6"/>
                             <constraint firstItem="eMM-yG-9Mc" firstAttribute="top" secondItem="EJf-Mz-qXK" secondAttribute="bottom" constant="15" id="urQ-Tm-wvz"/>
-                            <constraint firstItem="2Cl-Cx-pHM" firstAttribute="bottom" secondItem="Rzb-Fm-OkR" secondAttribute="bottom" id="vL4-VT-Vq5"/>
-                            <constraint firstItem="2Cl-Cx-pHM" firstAttribute="trailing" secondItem="Rzb-Fm-OkR" secondAttribute="trailing" id="x3U-3t-f0Y"/>
                             <constraint firstItem="Rzb-Fm-OkR" firstAttribute="trailing" secondItem="eMM-yG-9Mc" secondAttribute="trailing" constant="112" id="y4M-bF-mup"/>
-                            <constraint firstItem="2Cl-Cx-pHM" firstAttribute="top" secondItem="MbN-i1-5Fd" secondAttribute="bottom" id="yB3-xm-P44"/>
                         </constraints>
                     </view>
                     <connections>
@@ -267,7 +271,8 @@
                         <outlet property="lbl_StartDate" destination="eMM-yG-9Mc" id="LL0-OY-Ga5"/>
                         <outlet property="lbl_Tecnica" destination="5QA-3A-BHd" id="MW7-jb-p1L"/>
                         <outlet property="lbl_Titulo" destination="EJf-Mz-qXK" id="adM-fc-BeE"/>
-                        <outlet property="wkv_VideoUrl" destination="2Cl-Cx-pHM" id="L0s-Dr-cPO"/>
+                        <outlet property="recorridoBtn" destination="zQK-Rj-MvX" id="UBe-2t-ep0"/>
+                        <outlet property="videoBtn" destination="4n1-FE-aJt" id="xs2-5v-ZKR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7a-9I-g70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2169,6 +2174,55 @@ El museo debe ser visto como un espacio abierto e incluyente hacia todas las for
             </objects>
             <point key="canvasLocation" x="3382.608695652174" y="-1149.1071428571429"/>
         </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="yDV-LK-6ug">
+            <objects>
+                <viewController storyboardIdentifier="WebViewViewController" id="OJv-lM-5pv" customClass="WebViewViewController" customModule="MuseoDeTodos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Umx-tX-PtR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcT-fk-c7v">
+                                <rect key="frame" x="0.0" y="80" width="414" height="782"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-ys-bf7">
+                                <rect key="frame" x="15" y="38" width="20" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="KlL-9o-kU8"/>
+                                    <constraint firstAttribute="width" constant="20" id="zYD-5u-zKc"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="exitBtnPressed:" destination="OJv-lM-5pv" eventType="touchUpInside" id="loW-gH-1Yz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BAc-XL-4iA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wMZ-ys-bf7" firstAttribute="leading" secondItem="BAc-XL-4iA" secondAttribute="leading" constant="15" id="8tx-p4-TIb"/>
+                            <constraint firstItem="wMZ-ys-bf7" firstAttribute="top" secondItem="Umx-tX-PtR" secondAttribute="top" constant="38" id="HsK-nX-rsN"/>
+                            <constraint firstItem="dcT-fk-c7v" firstAttribute="leading" secondItem="BAc-XL-4iA" secondAttribute="leading" id="S4U-tw-SJr"/>
+                            <constraint firstItem="dcT-fk-c7v" firstAttribute="top" secondItem="wMZ-ys-bf7" secondAttribute="bottom" constant="20" id="aVD-u5-eSN"/>
+                            <constraint firstItem="dcT-fk-c7v" firstAttribute="trailing" secondItem="BAc-XL-4iA" secondAttribute="trailing" id="pt8-ns-Jsp"/>
+                            <constraint firstItem="dcT-fk-c7v" firstAttribute="bottom" secondItem="BAc-XL-4iA" secondAttribute="bottom" id="uep-Pe-PGH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4gU-0X-tq6"/>
+                    <connections>
+                        <outlet property="webView" destination="dcT-fk-c7v" id="UOC-S1-5CB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5o-cH-BS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655" y="-1824"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="c8t-nL-HdH"/>
@@ -2176,6 +2230,7 @@ El museo debe ser visto como un espacio abierto e incluyente hacia todas las for
     <resources>
         <image name="IMAGEN" width="357" height="214"/>
         <image name="Rectangle 6" width="356" height="308"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="cube.transparent" catalog="system" width="128" height="124"/>
         <image name="cube.transparent.fill" catalog="system" width="128" height="124"/>
@@ -2185,8 +2240,8 @@ El museo debe ser visto como un espacio abierto e incluyente hacia todas las for
         <image name="img4" width="1120" height="640"/>
         <image name="logo" width="2444" height="2444"/>
         <image name="museo" width="2000" height="1467"/>
-        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person" width="3325" height="3412"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="telefono" width="512" height="512"/>
