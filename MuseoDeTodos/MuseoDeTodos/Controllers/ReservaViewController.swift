@@ -54,6 +54,9 @@ class ReservaViewController: UIViewController {
     @IBOutlet weak var studentsNum: UILabel!
     @IBOutlet weak var studentsStepper: UIStepper!
     
+    //button
+    @IBOutlet weak var reserveBtn: UIButton!
+    
     //date
     let datePicker = UIDatePicker()
     
@@ -67,9 +70,23 @@ class ReservaViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         if let title = name { titleLbl.text = "Reserva: \(title)" }
+        setupStyles()
         setUpViews()
         setupDatePicker()
         setupHourPicker()
+    }
+    
+    func setupStyles(){
+        dateTF.layer.cornerRadius = 15
+        hourTF.layer.cornerRadius = 15
+        reserveBtn.layer.cornerRadius = 15
+        
+        
+        dateTF.layer.borderWidth = 2
+        dateTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        hourTF.layer.borderWidth = 2
+        hourTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
     }
     
     func setUpViews(){

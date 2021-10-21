@@ -1114,6 +1114,7 @@
                         <outlet property="personsNum" destination="4Ff-Fq-gFc" id="ycE-2D-IN4"/>
                         <outlet property="personsStepper" destination="raN-R9-ZTM" id="LLM-E6-JlP"/>
                         <outlet property="personsView" destination="ddM-ar-yFz" id="jY6-ZQ-eJ6"/>
+                        <outlet property="reserveBtn" destination="mcS-Cs-XLg" id="L0d-DR-BOr"/>
                         <outlet property="studentsLbl" destination="dQu-yA-a8p" id="JnB-gl-xFA"/>
                         <outlet property="studentsNum" destination="bib-xF-nGh" id="QKm-yO-lb0"/>
                         <outlet property="studentsStepper" destination="61Z-aM-AbF" id="F4A-g1-Lks"/>
