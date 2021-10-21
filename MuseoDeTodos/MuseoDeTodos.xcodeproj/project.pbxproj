@@ -41,6 +41,10 @@
 		D708E90726D31C6600CFD79D /* MuseoDeTodosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D708E90626D31C6600CFD79D /* MuseoDeTodosUITests.swift */; };
 		D708E91B26D31CAE00CFD79D /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D708E91A26D31CAE00CFD79D /* PerfilViewController.swift */; };
 		D726402E272129C300DB1906 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726402D272129C300DB1906 /* WebViewViewController.swift */; };
+		D726403627214B1300DB1906 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726403527214B1300DB1906 /* Booking.swift */; };
+		D726403B27214CA800DB1906 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726403A27214CA800DB1906 /* HistorialViewController.swift */; };
+		D726404127214DF800DB1906 /* BookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726403F27214DF800DB1906 /* BookingTableViewCell.swift */; };
+		D726404227214DF800DB1906 /* BookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D726404027214DF800DB1906 /* BookingTableViewCell.xib */; };
 		D72F606427040B0C00DC2FF6 /* ReservaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F606327040B0C00DC2FF6 /* ReservaViewController.swift */; };
 		D76E34872717336000A1D11C /* HoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E34852717336000A1D11C /* HoyViewController.swift */; };
 		D76E349227173D7400A1D11C /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E349027173D7400A1D11C /* CalendarCollectionViewCell.swift */; };
@@ -133,6 +137,10 @@
 		D708E90826D31C6600CFD79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D708E91A26D31CAE00CFD79D /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		D726402D272129C300DB1906 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		D726403527214B1300DB1906 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		D726403A27214CA800DB1906 /* HistorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
+		D726403F27214DF800DB1906 /* BookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewCell.swift; sourceTree = "<group>"; };
+		D726404027214DF800DB1906 /* BookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingTableViewCell.xib; sourceTree = "<group>"; };
 		D72F606327040B0C00DC2FF6 /* ReservaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaViewController.swift; sourceTree = "<group>"; };
 		D76E34852717336000A1D11C /* HoyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoyViewController.swift; sourceTree = "<group>"; };
 		D76E349027173D7400A1D11C /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -292,6 +300,7 @@
 				D707985227208D990066B066 /* AgregarPagoViewController.swift */,
 				32AD932E2720A36600AA520D /* Noticias2ViewController.swift */,
 				D726402D272129C300DB1906 /* WebViewViewController.swift */,
+				D726403A27214CA800DB1906 /* HistorialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,6 +331,7 @@
 				D707982F272071120066B066 /* Termino.swift */,
 				D707984D2720879C0066B066 /* Card.swift */,
 				32AD93292720808600AA520D /* Noticia.swift */,
+				D726403527214B1300DB1906 /* Booking.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,6 +364,8 @@
 				D707982927206F3E0066B066 /* TerminoTableViewCell.xib */,
 				D70798432720821F0066B066 /* PagoTableViewCell.swift */,
 				D70798442720821F0066B066 /* PagoTableViewCell.xib */,
+				D726403F27214DF800DB1906 /* BookingTableViewCell.swift */,
+				D726404027214DF800DB1906 /* BookingTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -477,6 +489,7 @@
 				D79F89F426E822A700659267 /* GoogleService-Info.plist in Resources */,
 				D707982B27206F3E0066B066 /* TerminoTableViewCell.xib in Resources */,
 				D708E8EE26D31C6500CFD79D /* Assets.xcassets in Resources */,
+				D726404227214DF800DB1906 /* BookingTableViewCell.xib in Resources */,
 				D79F89FB26E8E48900659267 /* ExposicionTableViewCell.xib in Resources */,
 				D708E8EC26D31C5D00CFD79D /* Main.storyboard in Resources */,
 				0B585FC3270D7C140050EE3B /* FaqsViewController.xib in Resources */,
@@ -619,8 +632,10 @@
 				D7079830272071120066B066 /* Termino.swift in Sources */,
 				324D343F26F551E00051F15D /* Exposiciones2ViewController.swift in Sources */,
 				D79F89E326E8133800659267 /* LoginViewController.swift in Sources */,
+				D726403627214B1300DB1906 /* Booking.swift in Sources */,
 				D79F89DE26E8125000659267 /* SignUpViewController.swift in Sources */,
 				D76E349E271749F800A1D11C /* CalendarHelper.swift in Sources */,
+				D726403B27214CA800DB1906 /* HistorialViewController.swift in Sources */,
 				D76E34A7271797E500A1D11C /* EventoTableViewCell.swift in Sources */,
 				D72F606427040B0C00DC2FF6 /* ReservaViewController.swift in Sources */,
 				32AD932F2720A36600AA520D /* Noticias2ViewController.swift in Sources */,
@@ -631,6 +646,7 @@
 				0B46D074270DCFF500A15D7E /* PerfilDatosViewController.swift in Sources */,
 				D79F89FA26E8E48900659267 /* ExposicionTableViewCell.swift in Sources */,
 				D79A515526E92CFB0085BA67 /* DatosPerfilViewController.swift in Sources */,
+				D726404127214DF800DB1906 /* BookingTableViewCell.swift in Sources */,
 				D707982A27206F3E0066B066 /* TerminoTableViewCell.swift in Sources */,
 				D707985427208D990066B066 /* AgregarPagoViewController.swift in Sources */,
 				D79F8A0026E8E9F800659267 /* ExposicionesViewController.swift in Sources */,

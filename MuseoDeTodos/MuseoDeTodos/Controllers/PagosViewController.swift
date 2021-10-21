@@ -13,7 +13,6 @@ class PagosViewController: UIViewController {
 
     @IBOutlet weak var pagosTV: UITableView!
     
-    //var cards = [Card(image: "mastercard-logo", number: "4242424242424242", expiration: "08/24", cvc: 999),Card(image: "visa-logo", number: "4000002500003155", expiration: "06/28", cvc: 278),Card(image: "mastercard-logo", number: "4000000000009995", expiration: "12/23", cvc: 119),]
     
     //realm cards
     var cards: Results<Card>?

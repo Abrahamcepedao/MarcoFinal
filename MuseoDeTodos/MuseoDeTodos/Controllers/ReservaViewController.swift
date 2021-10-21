@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import RealmSwift
 
 class ReservaViewController: UIViewController {
 
@@ -14,6 +16,7 @@ class ReservaViewController: UIViewController {
     
     //variables reserva
     var name: String?
+    var image: String?
     var costo: Int?
     var costoA: Int?
     var costoN: Int?
@@ -56,6 +59,8 @@ class ReservaViewController: UIViewController {
     
     //hour
     let hourPicker = UIDatePicker()
+    
+    var totalPersons: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -201,9 +206,112 @@ class ReservaViewController: UIViewController {
         totalLbl.text = "$ \(total).00"
     }
     
-    //<--------book function--------->
     
+    
+    //<--------book function--------->
     @IBAction func bookPressed(_ sender: UIButton) {
-        print(total)
+        guard let date = dateTF.text else  {
+            let alert = UIAlertController(title: "Sucedió un error..", message: "Seleccione una fecha", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        guard let hour = hourTF.text else  {
+            let alert = UIAlertController(title: "Sucedió un error..", message: "Seleccione un horario", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        
+        // Prepare URL
+        let url = URL(string: "https://pacific-inlet-83178.herokuapp.com/reserve")
+        guard let requestUrl = url else { fatalError() }
+        // Prepare URL Request Object
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+         
+        // HTTP Request Parameters which will be sent in HTTP Request Body
+        
+        let uid = Auth.auth().currentUser?.uid
+        let email = Auth.auth().currentUser?.email
+        let visitId = UUID()
+        
+        let totalPersons: Int = Int(personsNum.text ?? "0")! + Int(adultsNum.text ?? "0")! + Int(kidsNum.text ?? "0")! + Int(studentsNum.text ?? "0")!
+        
+        if totalPersons == 0 {
+            let alert = UIAlertController(title: "Sucedió un error..", message: "Seleccione mínimo una persona", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        let postString = "userId=\(uid!)&userEmail=\(email!)&visitId=\(visitId)&persons=\(totalPersons)";
+        // Set HTTP Request Body
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        // Perform HTTP Request
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                
+                // Check for Error
+                if let error = error {
+                    print("Error took place \(error)")
+                    return
+                }
+            
+                
+         
+                // Convert HTTP Response Data to a String
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    print("Response data string:\n \(dataString)")
+                    
+                    //add booking to local database (realm)
+                    let username = Auth.auth().currentUser?.uid ?? ""
+                    var config = Realm.Configuration.defaultConfiguration
+                    config.fileURL!.deleteLastPathComponent()
+                    config.fileURL!.appendPathComponent(username)
+                    config.fileURL!.appendPathExtension("realm")
+                    let realm = try! Realm(configuration: config)
+                    
+                    do {
+                        try realm.write {
+                            let newBooking = Booking()
+                            newBooking.date = date
+                            newBooking.hour = hour
+                            newBooking.type = self.name!
+                            newBooking.image = self.image!
+                            
+                            realm.add(newBooking)
+                            
+                            //alert tarjeta agregada con exito
+                            DispatchQueue.main.async {
+                                let alert = UIAlertController(title: "Reserva", message: "Reservación creada exitosamente", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                                        NSLog("The \"OK\" alert occured.")
+                                    }))
+                                self.present(alert, animated: true, completion: nil)
+                            }
+                            
+                        }
+                    } catch {
+                        print("Eroor")
+                    }
+                }
+            
+                //alert succes
+        }
+        task.resume()
     }
+    
+//    func addBooking(date: String, hour: String){
+//
+//    }
+    
+    
 }

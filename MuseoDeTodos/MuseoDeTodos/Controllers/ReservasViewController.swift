@@ -57,6 +57,7 @@ extension ReservasViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc  = storyboard?.instantiateViewController(identifier: "ReservaViewController") as? ReservaViewController{
             vc.name = reservas[indexPath.row].title
+            vc.image = reservas[indexPath.row].image
             vc.costo = reservas[indexPath.row].costo
             vc.costoA = reservas[indexPath.row].costoA
             vc.costoN = reservas[indexPath.row].costoN
