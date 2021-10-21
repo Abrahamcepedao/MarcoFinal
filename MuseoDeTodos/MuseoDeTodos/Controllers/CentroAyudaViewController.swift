@@ -15,6 +15,11 @@ class CentroAyudaViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupStyles()
+    }
+    
+    func setupStyles(){
+        faqsBtn.layer.cornerRadius = 15
     }
 
 

@@ -791,7 +791,7 @@
                                     <constraint firstAttribute="height" constant="120" id="eCs-Dg-Qjc"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iiu-Sv-qEW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iiu-Sv-qEW">
                                 <rect key="frame" x="20" y="189" width="374" height="624"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.92941176469999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
@@ -860,6 +860,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="luh-Ta-c3l">
                                 <rect key="frame" x="20" y="215" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="96O-7L-Luw"/>
                                 </constraints>
@@ -874,6 +875,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NDR-34-Eb3">
                                 <rect key="frame" x="20" y="295" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="GcC-qR-rEz"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="JvQ-87-nPW"/>
@@ -1556,19 +1558,6 @@ El museo debe ser visto como un espacio abierto e incluyente hacia todas las for
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALM-jV-sDx">
-                                <rect key="frame" x="359" y="102" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="ceB-SI-jzy"/>
-                                    <constraint firstAttribute="height" constant="20" id="uCg-Nu-nHU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="tintColor" red="0.92351055150000005" green="0.027997247869999999" blue="0.60786813500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="plus.circle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="addBtnTapped:" destination="0hl-lE-RbJ" eventType="touchUpInside" id="0hj-px-JCZ"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-Dm-udh">
                                 <rect key="frame" x="35" y="162" width="344" height="700"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1600,6 +1589,19 @@ El museo debe ser visto como un espacio abierto e incluyente hacia todas las for
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALM-jV-sDx">
+                                <rect key="frame" x="344" y="94.5" width="35" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="88K-jK-ZOg"/>
+                                    <constraint firstAttribute="height" constant="35" id="obI-03-1Px"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="tintColor" red="0.92351055150000005" green="0.027997247869999999" blue="0.60786813500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="addBtnTapped:" destination="0hl-lE-RbJ" eventType="touchUpInside" id="0hj-px-JCZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BaD-Qc-plC"/>
                         <color key="backgroundColor" red="0.96804231409999997" green="0.95266002419999996" blue="0.93394190070000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1607,8 +1609,8 @@ El museo debe ser visto como un espacio abierto e incluyente hacia todas las for
                             <constraint firstItem="bAf-Dm-udh" firstAttribute="leading" secondItem="BaD-Qc-plC" secondAttribute="leading" constant="35" id="2GQ-XI-tWa"/>
                             <constraint firstItem="BaD-Qc-plC" firstAttribute="trailing" secondItem="bAf-Dm-udh" secondAttribute="trailing" constant="35" id="9Cr-JA-utt"/>
                             <constraint firstItem="BaD-Qc-plC" firstAttribute="trailing" secondItem="ALM-jV-sDx" secondAttribute="trailing" constant="35" id="GcO-hA-JpW"/>
-                            <constraint firstItem="ALM-jV-sDx" firstAttribute="top" secondItem="BaD-Qc-plC" secondAttribute="top" constant="58" id="Kic-ZV-5hW"/>
                             <constraint firstItem="CNq-iR-1mS" firstAttribute="top" secondItem="BaD-Qc-plC" secondAttribute="top" constant="53" id="LWM-Vl-D2e"/>
+                            <constraint firstItem="ALM-jV-sDx" firstAttribute="top" secondItem="BaD-Qc-plC" secondAttribute="top" constant="50" id="dVP-eT-SRw"/>
                             <constraint firstItem="bAf-Dm-udh" firstAttribute="top" secondItem="CNq-iR-1mS" secondAttribute="bottom" constant="35" id="r0e-H7-Ygh"/>
                             <constraint firstItem="bAf-Dm-udh" firstAttribute="bottom" secondItem="BaD-Qc-plC" secondAttribute="bottom" id="rlQ-RI-fgI"/>
                             <constraint firstItem="CNq-iR-1mS" firstAttribute="leading" secondItem="BaD-Qc-plC" secondAttribute="leading" constant="35" id="t5V-Pa-aIU"/>
@@ -1621,7 +1623,7 @@ El museo debe ser visto como un espacio abierto e incluyente hacia todas las for
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EY6-qq-JGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2504" y="1016"/>
+            <point key="canvasLocation" x="2502.898550724638" y="1015.8482142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mOj-em-EaY">

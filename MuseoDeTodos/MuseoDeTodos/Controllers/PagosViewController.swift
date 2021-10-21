@@ -20,9 +20,7 @@ class PagosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        
+        // Do any additional setup after loading the view
         loadCards()
         setupTV()
     }

@@ -51,18 +51,23 @@ class DatosPerfilViewController: UIViewController {
         birthdateTF.layer.cornerRadius = 15
         nextBtn.layer.cornerRadius = 15
         
+        firstnameTF.clipsToBounds = true
         firstnameTF.layer.borderWidth = 2
         firstnameTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
         
+        secondnameTF.clipsToBounds = true
         secondnameTF.layer.borderWidth = 2
         secondnameTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
         
+        lastnameTF.clipsToBounds = true
         lastnameTF.layer.borderWidth = 2
         lastnameTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
         
+        sexTF.clipsToBounds = true
         sexTF.layer.borderWidth = 2
         sexTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
         
+        birthdateTF.clipsToBounds = true
         birthdateTF.layer.borderWidth = 2
         birthdateTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
     }

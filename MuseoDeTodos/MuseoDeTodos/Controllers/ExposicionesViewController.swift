@@ -10,8 +10,6 @@ import FirebaseFirestore
 
 class ExposicionesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //var exposiciones: [Exposicion] = [Exposicion(title: "titulo 1", subtitle: "subtitulo 1", firstDate: "16 OCT 2020", lastDate: "11 ABR 2021", image: ""), Exposicion(title: "titulo 2", subtitle: "subtitulo 2", firstDate: "19 AUG 2021", lastDate: "19 NOV 2021", image: "")]
-        
     
     @IBOutlet weak var exposicionesTV: UITableView!
     
@@ -26,22 +24,19 @@ class ExposicionesViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getData()
         
-        // set up }table view
         exposicionesTV.delegate = self
         exposicionesTV.dataSource = self
         let nib = UINib(nibName: "ExposicionTableViewCell", bundle: nil)
         exposicionesTV.register(nib, forCellReuseIdentifier: "exposicionCell")
         
-        p=0
+        p = 0
         
-        fetchData2()
-        fetchData3()
-
+        loadExpositions()
+        loadNews()
     }
     
-    func fetchData2() {
+    func loadExpositions() {
         NetworkManager.getExternalData(fileLocation: "https://pacific-inlet-83178.herokuapp.com/expositions", method:  .get, parameters: nil, stringParameters: nil) { (exposition: Exposiciones?, error) in
             if error != nil {
                 print(error!)
@@ -58,7 +53,7 @@ class ExposicionesViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    func fetchData3() {
+    func loadNews() {
         NetworkManager.getExternalData(fileLocation: "https://pacific-inlet-83178.herokuapp.com/news", method:  .get, parameters: nil, stringParameters: nil) { (news: Noticias?, error) in
             if error != nil {
                 print(error!)
@@ -74,55 +69,6 @@ class ExposicionesViewController: UIViewController, UITableViewDelegate, UITable
             }
         }
     }
-    
-    func fetchData() {
-        db.collection("exposicion").addSnapshotListener { (querySnapshot, error) in
-            guard let documents = querySnapshot?.documents else {
-                print("No documents")
-                return
-            }
-            self.exposiciones = documents.compactMap { (queryDocumentSnapshot) -> Exposicion in
-                let data = queryDocumentSnapshot.data()
-                
-                let id = data["id"] as? String ?? ""
-                let title = data["title"] as? String ?? ""
-                let startDate = data["startDate"] as? String ?? ""
-                let description = data["description"] as? String ?? ""
-                let cerraduria = data["cerraduria"] as? String ?? ""
-                let museografia = data["museografia"] as? String ?? ""
-                let salas = data["salas"] as? String ?? ""
-                let tecnica = data["tecnica"] as? String ?? ""
-                let obras = data["obras"] as? String ?? ""
-                let recorridoVirtual = data["recorridoVirtual"] as? String ?? ""
-                let videoUrl = data["videoUrl"] as? String ?? "https://www.youtube.com/watch?v=fv1Q0SPWonk"
-                let photoUrl = data["photoUrl"] as? String ?? ""
-
-                
-                //print(title)
-                return Exposicion(id: id, title: title, startDate: startDate, description: description, cerraduria: cerraduria, museografia: museografia, salas: salas, tecnica: tecnica, obras: obras, recorridoVirtual: recorridoVirtual, videoUrl: videoUrl, photoUrl: photoUrl)
-                
-            }
-            self.exposicionesTV.reloadData()
-        }
-    }
-    
-    
-    
-    //func getData(){
-    //    var exposicionesTemp: [Exposicion] = []
-    //    db.collection("exposicion").getDocuments() { (querySnapshot, err) in
-    //        if let err = err {
-    //            print("Error getting documents: \(err)")
-    //        } else {
-    //            for document in querySnapshot!.documents {
-    //                let tituloTemp : String = document.get("titulo") as! String
-    //               exposicionesTemp.append(Exposicion(title: tituloTemp, subtitle: "subtitulo 1", firstDate: "16 OCT 2020", lastDate: "11 ABR 2021", image: ""))
-    //            }
-    //            dump(exposicionesTemp)
-    //        }
-    //    }
-    //}
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (p == 0){

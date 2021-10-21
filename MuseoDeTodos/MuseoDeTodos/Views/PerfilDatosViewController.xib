@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,8 +12,10 @@
                 <outlet property="apellidosTxt" destination="bj2-O0-UTk" id="YxZ-8Y-7dG"/>
                 <outlet property="emailTxt" destination="fVU-El-hJj" id="ef6-Cs-H2y"/>
                 <outlet property="fechaNacimientoTxt" destination="2Vf-6d-7jg" id="HUB-PF-RJa"/>
-                <outlet property="passTxt" destination="bj2-O0-UTk" id="3AK-is-qPU"/>
+                <outlet property="modifiedBtn" destination="va9-sN-cbZ" id="pms-C8-95w"/>
+                <outlet property="passTxt" destination="62s-k7-78G" id="1Lf-Fi-H0u"/>
                 <outlet property="primerNombreTxt" destination="bxY-wQ-jGb" id="4w6-cn-lSU"/>
+                <outlet property="saveBtn" destination="wKv-QF-NEh" id="3Rs-EM-Xzz"/>
                 <outlet property="segundoNombreTxt" destination="aXX-Gd-GNt" id="tGN-JA-AP3"/>
                 <outlet property="sexoTxt" destination="VwI-yV-knt" id="uIq-Oh-cQe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -44,11 +46,13 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="fVU-El-hJj">
                     <rect key="frame" x="16" y="281" width="382" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecciona tu sexo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-yV-knt">
                     <rect key="frame" x="20" y="598" width="374" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="tvT-kl-CFc"/>
                     </constraints>
@@ -57,6 +61,7 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Primer nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxY-wQ-jGb">
                     <rect key="frame" x="20" y="410" width="374" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="f5w-YY-ANW"/>
                     </constraints>
@@ -65,6 +70,7 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecciona tu fecha de nacimiento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-6d-7jg">
                     <rect key="frame" x="20" y="686" width="374" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="Cp4-qL-FUk"/>
                     </constraints>
@@ -73,11 +79,13 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="62s-k7-78G">
                     <rect key="frame" x="16" y="327" width="382" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bj2-O0-UTk">
                     <rect key="frame" x="20" y="510" width="374" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="AaC-qQ-eOx"/>
                     </constraints>
@@ -99,6 +107,7 @@
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segundo nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXX-Gd-GNt">
                     <rect key="frame" x="20" y="460" width="374" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="b4U-2e-hZ4"/>
                     </constraints>

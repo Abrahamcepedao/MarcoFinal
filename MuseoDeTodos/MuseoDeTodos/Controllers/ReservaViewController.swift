@@ -81,10 +81,11 @@ class ReservaViewController: UIViewController {
         hourTF.layer.cornerRadius = 15
         reserveBtn.layer.cornerRadius = 15
         
-        
+        dateTF.clipsToBounds = true
         dateTF.layer.borderWidth = 2
         dateTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
         
+        hourTF.clipsToBounds = true
         hourTF.layer.borderWidth = 2
         hourTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
     }
@@ -102,9 +103,7 @@ class ReservaViewController: UIViewController {
         }
         
         
-        totalLbl.text = "$ \(total).00"
-        
-        
+        totalLbl.text = "$ \(total).0"
     }
     
     //<--------date functions--------->

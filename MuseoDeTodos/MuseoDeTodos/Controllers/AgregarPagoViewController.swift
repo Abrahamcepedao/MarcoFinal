@@ -32,18 +32,43 @@ class AgregarPagoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupStyles()
         setupPicker()
         setupTF()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-            if let firstVC = presentingViewController as? PagosViewController {
-                DispatchQueue.main.async {
-                    firstVC.pagosTV.reloadData()
-                }
+        super.viewWillDisappear(animated)
+        if let firstVC = presentingViewController as? PagosViewController {
+            DispatchQueue.main.async {
+                firstVC.pagosTV.reloadData()
             }
         }
+    }
+    
+    func setupStyles(){
+        cardNumTF.layer.cornerRadius = 15
+        expirationTF.layer.cornerRadius = 15
+        vcvTF.layer.cornerRadius = 15
+        methodTF.layer.cornerRadius = 15
+        addBtn.layer.cornerRadius = 15
+        
+        cardNumTF.clipsToBounds = true
+        cardNumTF.layer.borderWidth = 2
+        cardNumTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        expirationTF.clipsToBounds = true
+        expirationTF.layer.borderWidth = 2
+        expirationTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        vcvTF.clipsToBounds = true
+        vcvTF.layer.borderWidth = 2
+        vcvTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        methodTF.clipsToBounds = true
+        methodTF.layer.borderWidth = 2
+        methodTF.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+    }
     
     func setupPicker(){
         methodPV.delegate = self

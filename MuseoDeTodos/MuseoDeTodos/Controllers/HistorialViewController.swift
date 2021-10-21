@@ -13,7 +13,6 @@ class HistorialViewController: UIViewController {
 
     @IBOutlet weak var historialTV: UITableView!
     
-    
     //booking
     var bookings: Results<Booking>?
     

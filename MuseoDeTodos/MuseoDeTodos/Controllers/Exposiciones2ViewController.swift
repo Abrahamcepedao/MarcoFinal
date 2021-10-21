@@ -32,6 +32,12 @@ class Exposiciones2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setup()
+        setupStyles()
+    }
+    
+    func setup(){
         lbl_Titulo.text = data.title
         lbl_StartDate.text = String(data.startDate.prefix(10))
         lbl_Cerraduria.text = "Curaduría: " + data.cerraduria
@@ -47,6 +53,11 @@ class Exposiciones2ViewController: UIViewController {
         if data.recorridoVirtual == "" {
             recorridoBtn.isHidden = true
         }
+    }
+    
+    func setupStyles(){
+        videoBtn.layer.cornerRadius = 15
+        recorridoBtn.layer.cornerRadius = 15
     }
     
     

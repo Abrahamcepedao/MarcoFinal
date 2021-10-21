@@ -25,6 +25,11 @@ class PerfilDatosViewController: UIViewController{
     var apellidos: String?
     var segundoNombre: String?
     
+    //buttons
+    @IBOutlet weak var modifiedBtn: UIButton!
+    @IBOutlet weak var saveBtn: UIButton!
+    
+    
     //gender pickerView
     let gender = ["Hombre", "Mujer", "Otro"]
     let genderPickerView = UIPickerView()
@@ -60,8 +65,48 @@ class PerfilDatosViewController: UIViewController{
             fechaNacimientoTxt.text = formatter.string(from: date)
         }
         
+        setupStyles()
     }
     
+    func setupStyles(){
+        primerNombreTxt.layer.cornerRadius = 15
+        segundoNombreTxt.layer.cornerRadius = 15
+        apellidosTxt.layer.cornerRadius = 15
+        emailTxt.layer.cornerRadius = 15
+        sexoTxt.layer.cornerRadius = 15
+        passTxt.layer.cornerRadius = 15
+        fechaNacimientoTxt.layer.cornerRadius = 15
+        modifiedBtn.layer.cornerRadius = 15
+        saveBtn.layer.cornerRadius = 15
+        
+        primerNombreTxt.clipsToBounds = true
+        primerNombreTxt.layer.borderWidth = 2
+        primerNombreTxt.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        segundoNombreTxt.clipsToBounds = true
+        segundoNombreTxt.layer.borderWidth = 2
+        segundoNombreTxt.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        apellidosTxt.clipsToBounds = true
+        apellidosTxt.layer.borderWidth = 2
+        apellidosTxt.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        emailTxt.clipsToBounds = true
+        emailTxt.layer.borderWidth = 2
+        emailTxt.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        sexoTxt.clipsToBounds = true
+        sexoTxt.layer.borderWidth = 2
+        sexoTxt.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        passTxt.clipsToBounds = true
+        passTxt.layer.borderWidth = 2
+        passTxt.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+        
+        fechaNacimientoTxt.clipsToBounds = true
+        fechaNacimientoTxt.layer.borderWidth = 2
+        fechaNacimientoTxt.layer.borderColor = #colorLiteral(red: 0.8954718709, green: 0.1038885489, blue: 0.6602074504, alpha: 1)
+    }
     
     
     func setupPicker(){

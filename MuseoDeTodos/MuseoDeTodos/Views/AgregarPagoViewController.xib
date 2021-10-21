@@ -31,6 +31,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFi-Wm-3Y1">
                     <rect key="frame" x="35" y="162" width="344" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="lXY-hZ-7N9"/>
                     </constraints>
@@ -39,6 +40,7 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-yc-CEj">
                     <rect key="frame" x="35" y="226" width="60" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="6L0-28-hrn"/>
                         <constraint firstAttribute="width" constant="60" id="ENO-ZZ-cNk"/>
@@ -48,13 +50,14 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpn-cO-l5F">
                     <rect key="frame" x="215" y="226" width="164" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="Jvk-rO-VEo"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MFj-ef-Nct">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="american-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MFj-ef-Nct">
                     <rect key="frame" x="35" y="290" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="4NY-G6-Aye"/>
@@ -95,6 +98,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVj-7Q-MNo">
                     <rect key="frame" x="125" y="226" width="60" height="34"/>
+                    <color key="backgroundColor" red="0.96066671609999998" green="0.93902605770000003" blue="0.91647326949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="5Ia-n0-vmW"/>
                         <constraint firstAttribute="height" constant="34" id="hGo-bp-I30"/>
