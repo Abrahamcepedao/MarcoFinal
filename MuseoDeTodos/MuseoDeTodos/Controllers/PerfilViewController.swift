@@ -15,8 +15,11 @@ class PerfilViewController: UIViewController {
 
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var optionsTV: UITableView!
-    @IBOutlet weak var datosPerfilBtn: UIButton!
-    @IBOutlet weak var centroAyudaBtn: UIButton!
+    @IBOutlet weak var optionsView: UIStackView!
+    @IBOutlet weak var reservationsBtn: UIButton!
+    @IBOutlet weak var expositionsBtn: UIButton!
+    @IBOutlet weak var leftView: UIView!
+    @IBOutlet weak var rightView: UIView!
     
     let options: [Option] = [
         Option(title: "Terminos de servicio", image: "info.circle"),
@@ -47,7 +50,21 @@ class PerfilViewController: UIViewController {
        
 
         // Do any additional setup after loading the view.
+        setupStyles()
         fetchData()
+    }
+    
+    func setupStyles(){
+        leftView.clipsToBounds = true
+        leftView.layer.cornerRadius = 15
+        leftView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        
+        rightView.clipsToBounds = true
+        rightView.layer.cornerRadius = 15
+        rightView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        
+        reservationsBtn.layer.cornerRadius = 15
+        expositionsBtn.layer.cornerRadius = 15
     }
     
     func fetchData(){
@@ -97,16 +114,22 @@ class PerfilViewController: UIViewController {
         
     }
     
-    @IBAction func openEventos(_ sender: UIButton) {
-        let vc = HoyViewController(nibName: "HoyViewController", bundle: nil)
-        vc.modalPresentationStyle = .pageSheet
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func opnHistorial(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HistorialViewController") as! HistorialViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
+    @IBAction func openPagos(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PagosViewController") as! PagosViewController
+        self.present(nextViewController, animated:true, completion:nil)
+    }
     
     @IBAction func reservasPressed(_ sender: UIButton) {
         self.tabBarController?.selectedIndex = 2;
     }
+    
 
     @IBAction func esposicionesPressed(_ sender: UIButton) {
         self.tabBarController?.selectedIndex = 0;
