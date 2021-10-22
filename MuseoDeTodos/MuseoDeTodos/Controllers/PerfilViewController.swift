@@ -40,6 +40,11 @@ class PerfilViewController: UIViewController {
     //db
     private var db = Firestore.firestore()
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("fetching")
+        fetchData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,7 +106,7 @@ class PerfilViewController: UIViewController {
         vc.apellidos = userData?.lastnames
         vc.segundoNombre = userData?.secondame
         vc.sex = userData?.sex
-        vc.modalPresentationStyle = .pageSheet
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
         
     }

@@ -28,6 +28,7 @@ class AgregarPagoViewController: UIViewController {
     let methods = ["American Express", "Mastercard", "Visa"]
     var methodPV = UIPickerView()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

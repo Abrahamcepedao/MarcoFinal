@@ -12,13 +12,13 @@ class ReservasViewController: UIViewController {
     @IBOutlet weak var reservasTV: UITableView!
     
     var reservas: [Reserva] = [
-        Reserva(title: "Restaurante", dias: "Martes a domingo", horas: "1pm a 6pm", image: "img", costoA: 0, costoN: 0, costoE: 0, costo: 0),
-        Reserva(title: "Visita guiada", dias: "Lunes a domingo", horas: "10am a 6pm", image: "img2", costoA: 100, costoN: 50, costoE: 50, costo: 0),
-        Reserva(title: "Visita guiada para niños ",  dias: "Lunes a domingo", horas: "10am a 6pm", image: "img2", costoA: 0, costoN: 50, costoE: 0, costo: 0),
-        Reserva(title: "Boletos", dias: "Lunes  a domingo", horas: "10am a 6pm", image: "img2", costoA: 45, costoN: 30, costoE: 30, costo: 0),
-        Reserva(title: "Cursos para niños",  dias: "Lunes 5 al 9 de abril", horas: "11am a 3pm", image: "img3", costoA: 0, costoN: 800, costoE: 0, costo: 0),
-        Reserva(title: "Cursos para adultos ", dias: "Lunes 15 al 21 de octubre", horas: "11am a 3pm", image: "img2", costoA: 800, costoN: 0, costoE: 0, costo: 0),
-        Reserva(title: "Lengua de señas mexicana", dias: "Lunes 15 al 21 de octubre", horas: "11am a 3pm", image: "img4", costoA: 0, costoN: 0, costoE: 0, costo: 800)
+        Reserva(title: "Restaurante", dias: "Martes a domingo", horas: "1pm a 6pm", image: "img", costoA: 0, costoN: 0, costoE: 0),
+        Reserva(title: "Visita guiada", dias: "Lunes a domingo", horas: "10am a 6pm", image: "img2", costoA: 100, costoN: 50, costoE: 50),
+        Reserva(title: "Visita guiada para niños ",  dias: "Lunes a domingo", horas: "10am a 6pm", image: "img2", costoA: 0, costoN: 50, costoE: 0),
+        Reserva(title: "Boletos", dias: "Lunes  a domingo", horas: "10am a 6pm", image: "img2", costoA: 45, costoN: 30, costoE: 30),
+        Reserva(title: "Cursos para niños",  dias: "Lunes 5 al 9 de abril", horas: "11am a 3pm", image: "img3", costoA: 0, costoN: 800, costoE: 0),
+        Reserva(title: "Cursos para adultos ", dias: "Lunes 15 al 21 de octubre", horas: "11am a 3pm", image: "img2", costoA: 800, costoN: 0, costoE: 0),
+        Reserva(title: "Lengua de señas mexicana", dias: "Lunes 15 al 21 de octubre", horas: "11am a 3pm", image: "img4", costoA: 8000, costoN: 800, costoE: 800)
     ]
     
     override func viewDidLoad() {
@@ -58,7 +58,6 @@ extension ReservasViewController: UITableViewDelegate, UITableViewDataSource {
         if let vc  = storyboard?.instantiateViewController(identifier: "ReservaViewController") as? ReservaViewController{
             vc.name = reservas[indexPath.row].title
             vc.image = reservas[indexPath.row].image
-            vc.costo = reservas[indexPath.row].costo
             vc.costoA = reservas[indexPath.row].costoA
             vc.costoN = reservas[indexPath.row].costoN
             vc.costoE = reservas[indexPath.row].costoE

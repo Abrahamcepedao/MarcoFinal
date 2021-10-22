@@ -68,6 +68,16 @@ class PerfilDatosViewController: UIViewController{
         setupStyles()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let firstVC = presentingViewController as? PerfilViewController {
+            DispatchQueue.main.async {
+                print(self.primerNombreTxt.text!)
+                firstVC.usernameLbl.text = self.primerNombreTxt.text!
+            }
+        }
+    }
+    
     func setupStyles(){
         primerNombreTxt.layer.cornerRadius = 15
         segundoNombreTxt.layer.cornerRadius = 15
@@ -248,6 +258,7 @@ class PerfilDatosViewController: UIViewController{
         let alert = UIAlertController(title: "Guardar", message: "Cambios guardados exitosamente", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
+            self.dismiss(animated: true, completion: nil)
             }))
         self.present(alert, animated: true, completion: nil)
     }

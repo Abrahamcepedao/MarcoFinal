@@ -14,7 +14,6 @@ struct Reserva {
     let horas: String
     let image: String?
     let costoA: Int? //adultos
-    let costoN: Int? //niiños
-    let costoE: Int? //estudiantes
-    let costo: Int? //costo general
+    let costoN: Int? //niños
+    let costoE: Int? //especiales
 }
