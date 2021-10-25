@@ -79,18 +79,6 @@ class ReservaViewController: UIViewController {
     }
     
     func setUpViews(){
-//        if (costo == 0 && costoA == 0 && costoN == 0  && costoE == 0) || costo != 0 {
-//            adultsView.isHidden = true
-//            kidsView.isHidden = true
-//            studentsView.isHidden = true
-//        } else {
-//            if (costoA != 0 || costoN != 0  || costoE != 0){ personsStepper.isEnabled = false }
-//            if(costoA == 0){ adultsStepper.isEnabled = false }
-//            if(costoN == 0){ kidsStepper.isEnabled = false }
-//            if(costoE == 0){ studentsStepper.isEnabled = false }
-//        }
-        
-        
         totalLbl.text = "$ \(total).0"
     }
     

@@ -1059,17 +1059,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adultsLbl" destination="oir-qP-8Re" id="5lI-Wc-pEm"/>
                         <outlet property="adultsNum" destination="4Ff-Fq-gFc" id="s8A-DO-B0u"/>
                         <outlet property="adultsStepper" destination="raN-R9-ZTM" id="HpS-Ug-NCn"/>
-                        <outlet property="adultsView" destination="kbQ-Ca-hqj" id="JwQ-gk-Zt8"/>
                         <outlet property="dateTF" destination="luh-Ta-c3l" id="eG7-bS-jki"/>
                         <outlet property="hourTF" destination="NDR-34-Eb3" id="8x7-8w-wcd"/>
-                        <outlet property="kidsLbl" destination="dFE-Dw-sIC" id="S7D-Zl-N20"/>
                         <outlet property="kidsNum" destination="mAt-Fp-8Od" id="bhc-Se-F0h"/>
                         <outlet property="kidsStepper" destination="8Ky-j0-lEL" id="hoU-mY-qFn"/>
-                        <outlet property="kidsView" destination="xP0-cd-RoS" id="cm1-bJ-QFF"/>
-                        <outlet property="personsView" destination="ddM-ar-yFz" id="jY6-ZQ-eJ6"/>
                         <outlet property="reserveBtn" destination="mcS-Cs-XLg" id="L0d-DR-BOr"/>
                         <outlet property="specialsNum" destination="P2p-Vd-Nzi" id="LKh-5G-ft6"/>
                         <outlet property="specialsStepper" destination="Nyh-LH-TyA" id="Ems-qI-aos"/>
